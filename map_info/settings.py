@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
+<<<<<<< Updated upstream
 # ローカルで立ち上げる際に有効にする。デプロイ時はコメントアウト
 # from map_info.settings_secret import SECRET_KEY, BASICAUTH_USERS
 # from .settings_secret import *
@@ -31,6 +32,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # デプロイ時に有効にする。ローカルで立ち上げる時はコメントアウト
 SECRET_KEY = os.environ['SECRET_KEY']
 BASICAUTH_USERS = {os.environ.get('USER'):os.environ.get('PASS')}
+=======
+# ローカルで立ち上げる際に有効にする。デプロイ時はコメントアウト。
+# from map_info.settings_secret import SECRET_KEY, BASICAUTH_USERS
+# from .settings_secret import *
+# BASICAUTH_USERS = BASICAUTH_USERS
+SECRET_KEY = '-memeie(u$$@inrujof+fsr&85f1zkpwhi+8svpvg0nro_hr!p'
+# デプロイ時に有効にする。ローカルで立ち上げる時はコメントアウト。
+# SECRET_KEY = os.environ['SECRET_KEY']
+# BASICAUTH_USERS = {os.environ.get('USER'):os.environ.get('PASS')}
+>>>>>>> Stashed changes
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

@@ -2,10 +2,10 @@ const BundleTracker = require("webpack-bundle-tracker");
 
 module.exports = {
   // ローカルで立ち上げる際に有効にする。デプロイの時はコメントアウト。
-  // publicPath: "http://0.0.0.0:8080/",
+  publicPath: "http://0.0.0.0:8080/",
 
   // デプロイの際に有効にする。ローカルで立ち上げる時はコメントアウト。
-  publicPath: "/static/",
+  // publicPath: "/static/",
   outputDir: "./dist/static/",
 
   chainWebpack: (config) => {

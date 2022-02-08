@@ -25,13 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # ローカルで立ち上げる際に有効にする。デプロイ時はコメントアウト
-# from map_info.settings_secret import SECRET_KEY, BASICAUTH_USERS
-# from .settings_secret import *
+from map_info.settings_secret import SECRET_KEY, BASICAUTH_USERS
+from .settings_secret import *
 # BASICAUTH_USERS = BASICAUTH_USERS
 
 # デプロイ時に有効にする。ローカルで立ち上げる時はコメントアウト
-SECRET_KEY = os.environ['SECRET_KEY']
-BASICAUTH_USERS = {os.environ.get('USER'):os.environ.get('PASS')}
+# SECRET_KEY = os.environ['SECRET_KEY']
+# BASICAUTH_USERS = {os.environ.get('USER'):os.environ.get('PASS')}
 
 
 # SECURITY WARNING: don't run with debug turned on in production!

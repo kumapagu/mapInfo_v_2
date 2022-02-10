@@ -4,15 +4,16 @@ import VueRouter from "vue-router";
 import Maps from "../views/Maps"
 import InfoEditor from "../views/InfoEditor"
 import Park from "../views/Park"
+import Gmap from "../views/Gmap"
 
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: "/",
-  //   name: "Home",
-  //   component: Home,
-  // },
+  {
+    path: "/gmap",
+    name: "Gmap",
+    component: Gmap,
+  },
   {
     path: "/",
     name: "maps",

@@ -35,7 +35,7 @@ export default {
   },
   async mounted() {
     this.google = await GoogleMapsApiLoader({
-      apiKey: process.env.VUE_APP_GOOGLE_API
+      // apiKey: process.env.VUE_APP_GOOGLE_API
     })
     if(sessionStorage.getItem('lat')){
       this.mapConfig.center.lat = Number((sessionStorage.getItem('lat')))

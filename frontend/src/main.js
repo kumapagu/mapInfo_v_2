@@ -6,7 +6,7 @@ import * as VueGoogleMaps from "vue2-google-maps"
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key:'',
+    key: process.env.VUE_APP_GOOGLE_API,
     libraries: 'places',
     region: 'JP',
     language: 'ja'

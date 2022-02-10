@@ -11,7 +11,7 @@
             <p>自動販売機：{{ park.vending_machine }}</p>
             <p>その他の情報：{{ park.add_info }}</p>
             <v-btn color="primary" class="mr-2" :to="{ name: 'info', params: { id: park.id } }">編集</v-btn>
-            <v-btn color="primary" class="mr-2" href="/">マップへ戻る</v-btn>
+            <v-btn color="primary" class="mr-2" :to="{ name: 'gmap' }">マップへ戻る</v-btn>
             <v-btn color="error" @click="deleteParkData" href="/">削除</v-btn>
 
         </v-container>
@@ -32,7 +32,6 @@ export default {
     data() {
         return {
             park: {},
-            isDisplay: true,
             lat: null,
             lng: null
         }

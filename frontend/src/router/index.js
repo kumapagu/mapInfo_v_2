@@ -1,20 +1,20 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-// import Home from "../views/Home";
+import Vue from "vue"
+import VueRouter from "vue-router"
 import Maps from "../views/Maps"
 import InfoEditor from "../views/InfoEditor"
 import Park from "../views/Park"
+import Gmap from "../views/Gmap"
 
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: "/",
-  //   name: "Home",
-  //   component: Home,
-  // },
   {
     path: "/",
+    name: "gmap",
+    component: Gmap,
+  },
+  {
+    path: "/maps",
     name: "maps",
     component: Maps,
     props: true
@@ -30,14 +30,6 @@ const routes = [
     name: "park",
     component: Park,
     props: true,
-    // children: [
-    //   {
-    //     path: "/park/:id/edit",
-    //     name: 'edit',
-    //     component: InfoEditor,
-    //     props: true
-    //   }
-    // ]
   },
 ];
 

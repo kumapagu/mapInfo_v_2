@@ -2,7 +2,7 @@
   <div class="parent">
     <div class="maps">
       <GmapMap 
-      :center="{ lat: 35.68944, lng: 139.69167 }" 
+      :center="center"
       :zoom= "14" 
       
       map-type-id="terrain" 
@@ -36,7 +36,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="primary" text :to="{ name: 'info', params: { id: this.park.id } }">
+            <v-btn color="primary" text :to="{ name: 'park', params: { id: this.park.id } }">
               詳細へ
             </v-btn>
           </v-card-actions>
@@ -68,6 +68,7 @@ export default {
     return{
       lat: '',
       lng: '',
+      center: { lat: 35.68944, lng: 139.69167 },
       parks: [],
       park: [],
       infoWindowPos: null,
@@ -99,7 +100,7 @@ export default {
     addPark(park) {
       this.park = park
     },
-    createInfo(){
+    createInfo() {
       if(this.lat && this.lng){
       this.$router.push({
         name: 'info',
@@ -111,10 +112,16 @@ export default {
       }else{
         alert('場所を選択してください')
       }
-    }    
+    },
+    setCenter() {
+      if(sessionStorage.getItem('lat')){
+        this.center = { lat:Number((sessionStorage.getItem('lat'))), lng:Number((sessionStorage.getItem('lng'))) }
+      } 
+    }
   },
   created() {
-    this.getParks()
+    this.getParks(),
+    this.setCenter()
   },
 }
 </script>
